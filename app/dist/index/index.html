@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+
+    <link rel="stylesheet" href="../base/reset.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/rooms.css">
+    <link rel="stylesheet" href="assets/css/switch.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Arvo:regular,italic,700,700italic" rel="stylesheet" />
+
+</head>
+<body>
+
+    <main id="body">
+        <div class="front">
+            <div class="front__title">
+                <h1 id="title">Typing Game</h1>
+            </div>
+
+            <div class="front__buttons">
+                <p id="start" class="front__paragraph">Start</p>
+                <p id="ranking" class="front__paragraph">Ranking</p>
+                <p id="howToPlay" class="front__paragraph">How to Play</p>
+                <p id="project" class="front__paragraph"><a class="project__link" href="https://github.com/cangussusam" target="_blank" rel="noopener noreferrer">Project</a></p>
+            </div>
+
+            <div class="windows">
+                <div class="popup" id="start__popup">
+                    <div class="popup__container">
+                        <button class="close">&times;</button>
+                        <div class="rooms">
+                            <form id="create">
+                                <div class="create__rooms">
+                                    <h1 class="create__rooms-title">Create Room</h1>
+                                    <div class="name container">
+                                        <label for="create__name" class="create__label">Room name:</label>
+                                        <input type="text" id="create__name" class="create__input" required>
+                                    </div>                  
+                                    <div class="create__switch">
+                                        <p class="create__public">Public</p>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <p class="create__private">Private</p>
+                                    </div>
+                                    <div class="password container">
+                                        <label for="create__password" class="create__label">Room password:</label>
+                                        <input type="text" id="create__password" class="create__input">
+                                    </div>
+                                    <div class="players container">
+                                        <label for="create__players" class="create__label">Number of players:
+                                            <select name="playerNumber" id="create__players">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div class="create__submit">
+                                        <button class="create__button btn">Create room</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="vertical__line"></div>
+                            <form id="enter">
+                                <div class="enter__rooms">
+                                    <h1 class="enter__rooms-title">Enter room</h1>
+                                    <div class="name container">
+                                        <label for="enter__name" class="enter__label">Room name:</label>
+                                        <input type="text" id="enter__name" class="enter__input" required>
+                                    </div>
+                                    <div class="password container">
+                                        <label for="enter__password" class="enter__label">Room password:</label>
+                                        <input type="text" id="enter__password" class="enter__input">
+                                    </div>                               
+                                </div>
+                                <div class="enter__submit">
+                                    <button class="enter__button btn">Enter room</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="htp__popup" id="htp__popup">
+                <div class="popup__container">
+                    <button class="htp__close">&times;</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+
+    "compilerOptions": {
+        "outDir": "app/dist/index/js",
+        "target": "ES6",
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "strictNullChecks": true,
+        "moduleResolution": "node"
+    },
+
+    "include": ["app/src/index/**/*"]
+
+}

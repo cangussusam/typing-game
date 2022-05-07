@@ -1,0 +1,68 @@
+.rooms{
+    display: flex;
+    justify-content: center;
+}
+
+.create__rooms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
+.create__rooms-title{
+    font-size: 1.25rem;
+    margin: 1.5rem;
+}
+
+.name.container, .create__switch, .password.container, .players.container{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+}
+
+.create__switch{
+    display: flex;
+    align-items: center;
+}
+
+.create__label{
+    margin-right: 0.5rem;
+}
+
+#create__players{
+    font-size: 1.5rem;
+}
+
+.vertical__line{
+    border: 1px solid black;
+    height: 350px;
+}
+
+.enter__rooms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+.enter__rooms-title{
+    font-size: 1.25rem;
+    margin: 1.5rem;
+}
+
+.enter__label{
+    margin-right: 0.5rem;
+}
+
+.btn{
+    background: rgb(158, 91, 158);
+    color: #fdfdfd;
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.enter__button{
+    margin-top: 8rem;
+}
+
