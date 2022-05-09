@@ -19,7 +19,11 @@ start.addEventListener('click', function(){
 
 startClose.addEventListener('click', function(){
     if(startPopup){
-        startPopup.setAttribute("style", "display: none;")
+        startPopup.classList.add('popout')
+        setTimeout(() => {
+            startPopup.setAttribute("style", "display: none;")
+            startPopup.classList.remove('popout')
+        },900)
     }
 })
 
@@ -32,6 +36,10 @@ howToPlay.addEventListener('click', function(){
 
 htpClose.addEventListener('click', function(){
     if(htpPopup){
-        htpPopup.setAttribute("style", "display: none;")
+        htpPopup.classList.add('popout')
+        setTimeout(() => {
+            htpPopup.setAttribute("style", "display: none;")
+            htpPopup.classList.remove('popout')
+        },900)
     }
 })

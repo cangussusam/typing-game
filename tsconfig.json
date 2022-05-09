@@ -1,7 +1,7 @@
 {
 
     "compilerOptions": {
-        "outDir": "app/dist/index/js",
+        "outDir": "app/dist/game/js",
         "target": "ES6",
         "noEmitOnError": true,
         "noImplicitAny": true,
@@ -10,6 +10,6 @@
         "moduleResolution": "node"
     },
 
-    "include": ["app/src/index/**/*"]
+    "include": ["app/src/game/**/*"]
 
 }

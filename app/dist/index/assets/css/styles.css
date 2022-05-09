@@ -1,19 +1,21 @@
 @font-face {
     font-family: 'fipps_filledregular';
-    src: url('../fonts/fippsfilled-regular-webfont.woff2') format('woff2'),
-        url('../fonts/fippsfilled-regular-webfont.woff') format('woff');
+    src: url('../../../base/fonts/fippsfilled-regular-webfont.woff2') format('woff2'),
+        url('../../../base/fonts/fippsfilled-regular-webfont.woff') format('woff');
 }
 
 @font-face {
     font-family: 'fippsregular';
-    src: url('../fonts/fipps-regular-webfont.woff2') format('woff2'),
-        url('../fonts/fipps-regular-webfont.woff') format('woff');
+    src: url('../../../base/fonts/fipps-regular-webfont.woff2') format('woff2'),
+        url('../../../base/fonts/fipps-regular-webfont.woff') format('woff');
 }
 
 body {
     font-family: 'fippsregular';
     background: url('../img/background-test.gif') no-repeat;
-    border: 1.9rem solid;
+    border: 3rem solid;
+    border-top: 1.52rem solid;
+    border-bottom: 1.52rem solid;
 }
 
 .front {
@@ -42,7 +44,7 @@ body {
     cursor: pointer;
 }
 
-.project__link{
+.remove__link{
     color: inherit;
     text-decoration: none;
 }
@@ -87,4 +89,34 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.popin {
+    animation: popin 1s ease;
+    -webkit-animation: popin 1s ease;
+}
+@keyframes popin {
+    from{transform:scale(0)}
+    80%{transform:scale(1.1)}
+    to{transform:scale(1)}
+}
+@-webkit-keyframes popin {
+    from{-webkit-transform:scale(0)}
+    80%{-webkit-transform:scale(1.1)}
+    to{-webkit-transform:scale(1)}
+}
+
+.popout{
+    animation: popout 1s ease;
+    -webkit-animation: popout 1s ease;
+}
+@keyframes popout {
+    0%{transform:scale(1)}
+    80%{transform:scale(1.1)}
+    100%{transform:scale(0)}
+}
+@-webkit-keyframes popout {
+    0%{-webkit-transform:scale(1)}
+    80%{-webkit-transform:scale(1.1)}
+    100%{-webkit-transform:scale(0)}
 }

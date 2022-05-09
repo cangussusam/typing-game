@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,15 +26,15 @@
                 <p id="start" class="front__paragraph">Start</p>
                 <p id="ranking" class="front__paragraph">Ranking</p>
                 <p id="howToPlay" class="front__paragraph">How to Play</p>
-                <p id="project" class="front__paragraph"><a class="project__link" href="https://github.com/cangussusam" target="_blank" rel="noopener noreferrer">Project</a></p>
+                <p id="project" class="front__paragraph"><a class="remove__link" href="https://github.com/cangussusam" target="_blank" rel="noopener noreferrer">Project</a></p>
             </div>
 
             <div class="windows">
-                <div class="popup" id="start__popup">
+                <div class="popup popin" id="start__popup">
                     <div class="popup__container">
                         <button class="close">&times;</button>
                         <div class="rooms">
-                            <form id="create">
+                            <form id="create" action="../lobby/index.html">
                                 <div class="create__rooms">
                                     <h1 class="create__rooms-title">Create Room</h1>
                                     <div class="name container">
@@ -70,13 +70,13 @@
                                         </label>
                                     </div>
                                     <div class="create__submit">
-                                        <button class="create__button btn">Create room</button>
+                                        <button class="create__button btn"><a class="remove__link">Create room</a></button>
                                     </div>
                                 </div>
                             </form>
 
                             <div class="vertical__line"></div>
-                            <form id="enter">
+                            <form id="enter" action="../lobby/index.html">
                                 <div class="enter__rooms">
                                     <h1 class="enter__rooms-title">Enter room</h1>
                                     <div class="name container">
@@ -96,7 +96,7 @@
                     </div>
                 </div>
             </div>
-            <div class="htp__popup" id="htp__popup">
+            <div class="htp__popup popin" id="htp__popup">
                 <div class="popup__container">
                     <button class="htp__close">&times;</button>
                 </div>
