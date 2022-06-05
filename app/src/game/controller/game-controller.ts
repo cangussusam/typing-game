@@ -1,7 +1,9 @@
+import { GameSendResults } from "../data/game-send-results.js"
+import { GameResults } from "../model/game-results.js"
 import { GameSetDifficulty } from "../model/game-setDifficulty.js"
+import { GameInicialTimer } from "../view/game-inicialTimer.js"
 import { GameSetWords } from "../view/game-setWords.js"
 import { GameTimer } from "../view/game-timer.js"
-
 
 export class GameController {
 
@@ -11,6 +13,7 @@ export class GameController {
     private mode: string = 'Easy'
     private difficulty: boolean = true
     private howManyWords = 100
+    private roundTime: number = 15
 
 
     private points: number = 0
@@ -32,8 +35,12 @@ export class GameController {
         if (code == 'Space') this.index++
     }
 
+    public inicialTimer(inicialTimer: HTMLDivElement, startDiv: HTMLDivElement, page: HTMLElement){
+        GameInicialTimer.run(inicialTimer, startDiv, page)
+    }
+
     private runTimer() {
-        GameTimer.showTimer(10, this.paragraphTimer)
+        GameTimer.showTimer(this.roundTime, this.paragraphTimer)
             .then(res => this.endGame(this.points, this.errors))
     }
 
@@ -80,6 +87,11 @@ export class GameController {
     }
 
     private endGame(points: number, errors: number) {
-        console.log(points, errors)
+
+        const results = new GameResults(points, errors, this.roundTime)
+
+        GameSendResults.postAPI(points, errors, results.accuracy, results.wpm)
+
     }
+
 }

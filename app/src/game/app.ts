@@ -3,6 +3,7 @@ import { GameController } from "./controller/game-controller.js"
 const input = document.querySelector('.input') as HTMLInputElement
 const inicialTimer = document.querySelector('.inicial__timer') as HTMLDivElement
 const page = document.querySelector('.main') as HTMLElement
+const startDiv = document.querySelector('.start') as HTMLDivElement
 
 const controller = new GameController
 
@@ -10,21 +11,11 @@ let index = 0
 
 function main(){
 
-    let timer = 3
-    const interval = setInterval(()=>{
-        const temp = timer--
-        inicialTimer.innerHTML = temp.toString()
-
-        if(!temp){
-            clearInterval(interval)
-            inicialTimer.innerHTML = 'Start!'
-            page.setAttribute("style", "display: block")
-            inicialTimer.setAttribute("style", "display: none")
-        }
-    }, 1000)
-
+    controller.inicialTimer(inicialTimer, startDiv, page)
     controller.defineGame()
 }
+
+main()
 
 input.addEventListener('input', function(){
     controller.startGame(input)
@@ -54,4 +45,3 @@ document.addEventListener('keydown', event => {
     if(event.code == 'Enter') event.preventDefault()
 })
 
-main()
